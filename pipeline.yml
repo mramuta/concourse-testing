@@ -1,7 +1,17 @@
 ---
+resources:
+- name: code
+  type: git
+  source:
+    uri: git@github.com:concourse/git-resource.git
+    branch: master
+    private_key: {{git-token}}
+
+
 jobs:
 - name: job-hello-world
   public: true
+  get: code
   plan:
   - task: hello-world
     params:
