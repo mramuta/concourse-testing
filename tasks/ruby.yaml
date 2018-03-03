@@ -11,4 +11,4 @@ image_resource:
     tag: alpine
 
 run:
-  path: code/tasks/ruby.rb
+  path: code/tasks/test.sh

@@ -18,7 +18,5 @@ jobs:
 - name: ruby-script
   plan:
   - get: code
-    passed: [bash-script]
-    trigger: true
-  - task: hello-world
+  - task: ruby
     file: code/tasks/ruby.yaml
