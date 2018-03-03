@@ -1,0 +1,8 @@
+---
+jobs:
+- name: job-hello-world
+  public: true
+  plan:
+  - task: hello-world
+    params:
+      file: tasks/ruby.yaml
