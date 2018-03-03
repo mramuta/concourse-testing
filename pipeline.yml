@@ -9,8 +9,16 @@ resources:
 
 
 jobs:
-- name: job-hello-world
-  public: true
+- name: bash-script
   plan:
   - get: code
+  - task: bash
+    file: code/tasks/bash.yaml
+
+- name: ruby-script
+  plan:
+  - get: code
+    passed: [bash-script]
+    trigger: true
   - task: hello-world
+    file: code/tasks/ruby.yaml
