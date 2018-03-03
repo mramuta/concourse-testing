@@ -1,6 +1,9 @@
 ---
 platform: linux
 
+inputs:
+  - name: code
+
 image_resource:
   type: docker-image
   source:
@@ -8,4 +11,4 @@ image_resource:
     tag: latest
 
 run:
-  path: tasks/test.sh
+  path: code/tasks/test.sh
