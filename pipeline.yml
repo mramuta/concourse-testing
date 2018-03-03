@@ -14,4 +14,4 @@ jobs:
   plan:
   - get: code
   - task: hello-world
-    file: tasks/ruby.yaml
+    file: code/tasks/ruby.yaml
